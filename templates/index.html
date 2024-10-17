@@ -21,12 +21,6 @@
 <body>
 <h1>Tracking Orders</h1>
 
-<label for="status-start" class="label-cargo-status">Cargo Status Start Date</label>
-<input type="date" id="status-start" class="js-input-start-date">
-
-<label for="status-end" class="label-cargo-status">Cargo Status End Date</label>
-<input type="date" id="status-end" class="js-input-end-date">
-
 <button class="ok-button" id="ok-button" >OK</button>
 
 <table id="js-show-result">
@@ -60,7 +54,6 @@
     // Load contents in table on OK button click
     document.getElementById("ok-button").addEventListener("click", async function() {
             await getMessages();
-            <!--        await showListFromDate();-->
     });
 
     // Close popup functionality

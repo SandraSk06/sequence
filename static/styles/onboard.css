@@ -1,17 +1,3 @@
-.label-cargo-status {
-    font-family: "Liberation Sans", serif;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.js-input-start-date {
-    margin-right: 20px;
-}
-
-.js-input-end-date {
-    margin-right: 20px;
-}
-
 .ok-button {
     font-family: "Liberation Sans", serif;
     font-size: 20px;
@@ -38,7 +24,7 @@
     border: 1px solid #ccc;
     padding: 20px;
     width: 50%;
-    height: 50%;
+    height: 100%;
 }
 
 #loading {
