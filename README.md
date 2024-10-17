@@ -15,6 +15,7 @@ https://bwmarrin.github.io/MkDocsPlus/js-sequence-diagrams/
 
 ## Example
 MQTTX server messages:
+
 Topic: testQoS: 0
 {
   "id": 4,
@@ -39,6 +40,7 @@ Topic: testQoS: 0
   "msg": "end"
 }
 
-Sequence
+Sequence:
+
 <img width="159" alt="Screenshot 2024-10-17 192739" src="https://github.com/user-attachments/assets/6a321193-de7b-4252-b187-c9377cf5fb37">
 
