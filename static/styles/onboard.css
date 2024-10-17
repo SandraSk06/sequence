@@ -1,0 +1,78 @@
+.label-cargo-status {
+    font-family: "Liberation Sans", serif;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.js-input-start-date {
+    margin-right: 20px;
+}
+
+.js-input-end-date {
+    margin-right: 20px;
+}
+
+.ok-button {
+    font-family: "Liberation Sans", serif;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    padding: 10px 25px;
+    border-color: transparent;
+    border-radius: 50px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#popup {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+#loading {
+    display: none;
+    text-align: center;
+}
+
+#top-container {
+display: flex;
+margin: 10px;
+justify-content: space-between;
+align-items: center;
+}
+
+#closePopup {
+width: 150px;
+height: 35px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+tr {
+    cursor: pointer;
+}

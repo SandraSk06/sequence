@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tracking Orders</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/onboard.css') }}" type="text/css"/>
+    <script src="{{ url_for('static', filename='scripts/onboard.js') }}" defer></script>
+
+    <!--  Library to load Sequence Diagram  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    <script src="https://cdn.rawgit.com/bramp/js-sequence-diagrams/master/dist/sequence-diagram-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.26/webfontloader.js"></script>
+
+</head>
+
+<body>
+<h1>Tracking Orders</h1>
+
+<label for="status-start" class="label-cargo-status">Cargo Status Start Date</label>
+<input type="date" id="status-start" class="js-input-start-date">
+
+<label for="status-end" class="label-cargo-status">Cargo Status End Date</label>
+<input type="date" id="status-end" class="js-input-end-date">
+
+<button class="ok-button" id="ok-button" >OK</button>
+
+<table id="js-show-result">
+    <thead>
+    <tr>
+        <th>Message ID</th>
+        <th>Message</th>
+        <!--<th>Shipping Origin</th>
+        <th>Order Date</th>
+        <th>OnTime Delivery</th>-->
+    </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be dynamically inserted here -->
+    </tbody>
+</table>
+
+<div id="overlay" onclick="closePopup()">
+    <div id="popup">
+        <div id="top-container">
+            <h2>Status Sequence</h2>
+            <button id="closePopup">Close Popup</button>
+        </div>
+        <div id="loading">Loading Diagram...</div>
+        <div id="sequence-diagram-container"></div>
+
+    </div>
+</div>
+
+<script>
+    // Load contents in table on OK button click
+    document.getElementById("ok-button").addEventListener("click", async function() {
+            await getMessages();
+            <!--        await showListFromDate();-->
+    });
+
+    // Close popup functionality
+    document.getElementById("closePopup").addEventListener("click", () => {
+        closePopup();
+    });
+</script>
+</body>
+
+</html>
